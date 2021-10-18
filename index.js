@@ -10,25 +10,21 @@ function getInput() {
 function addBook(bookObj) {
   const bookList = document.getElementById('book-list');
   const book = document.createElement("LI");
-  book.classList.add(bookObj.title);
-  book.innerHTML = `Title: ${bookObj.title} <br> Author: ${bookObj.author}`;
+  book.setAttribute('id', bookObj.title);
+  book.innerHTML = `Title: ${bookObj.title} <br>Author: ${bookObj.author}`;
   const deleteBtn = document.createElement("button");
   deleteBtn.innerHTML = "Delete";
-  deleteBtn.addEventListener('click', (bookObj) => {
-    removeBook(bookObj.title);
-  })
-  
+  deleteBtn.addEventListener('click', () => removeBook(bookObj.title));
   book.appendChild(deleteBtn);
   bookList.appendChild(book);
-
 }
 
 const addButton = document.getElementById('add-btn')
 addButton.addEventListener('click', function(){
   book = getInput()
   library.push(book);
-  addBook(book);
   localStorage.setItem('library', JSON.stringify(library));
+  addBook(book);
 })
 
 window.onload = function(){
@@ -44,5 +40,8 @@ window.onload = function(){
 }
 
 function removeBook(title) {
+  const book = document.getElementById(title);
+  book.remove();
   library = library.filter((bookObj) => bookObj.title !== title);
+
 }
