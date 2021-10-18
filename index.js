@@ -18,7 +18,7 @@ function addBook(bookObj) {
   const bookList = document.getElementById('book-list');
   const book = document.createElement('LI');
   book.setAttribute('id', bookObj.title);
-  book.innerHTML = `Title: ${bookObj.title} <br>Author: ${bookObj.author}`;
+  book.innerHTML = `<h3> ${bookObj.title} </h3> <p>${bookObj.author} </p>`;
   const deleteBtn = document.createElement('button');
   deleteBtn.innerHTML = 'Delete';
   deleteBtn.addEventListener('click', () => removeBook(bookObj.title));
