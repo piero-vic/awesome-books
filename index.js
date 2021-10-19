@@ -17,21 +17,21 @@ function getInput() {
   return book;
 }
 
-function removeBook(title) {
-  const book = document.getElementById(title);
+function removeBook(id) {
+  const book = document.getElementById(id);
   book.remove();
-  library = library.filter((bookObj) => bookObj.title !== title);
+  library = library.filter((bookObj) => bookObj.id !== id);
   localStorage.setItem('library', JSON.stringify(library));
 }
 
 function addBook(bookObj) {
   const bookList = document.getElementById('book-list');
   const book = document.createElement('LI');
-  book.setAttribute('id', bookObj.title);
+  book.setAttribute('id', bookObj.id);
   book.innerHTML = `<h3> ${bookObj.title} </h3> <p>${bookObj.author} </p>`;
   const deleteBtn = document.createElement('button');
   deleteBtn.innerHTML = 'Delete';
-  deleteBtn.addEventListener('click', () => removeBook(bookObj.title));
+  deleteBtn.addEventListener('click', () => removeBook(bookObj.id));
   book.appendChild(deleteBtn);
   bookList.appendChild(book);
 }
