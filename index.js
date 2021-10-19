@@ -4,13 +4,16 @@ class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
+    this.id = Math.random();
   }
 }
 
 function getInput() {
-  title = document.getElementById('bookTitle').value;
-  author = document.getElementById('bookAuthor').value;
-  const book = new Book(title, author);
+  const title = document.getElementById('bookTitle');
+  const author = document.getElementById('bookAuthor');
+  const book = new Book(title.value, author.value);
+  title.value = '';
+  author.value = '';
   return book;
 }
 
@@ -33,6 +36,7 @@ function addBook(bookObj) {
   bookList.appendChild(book);
 }
 
+// Add Button
 const addButton = document.getElementById('add-btn');
 addButton.addEventListener('click', () => {
   const book = getInput();
@@ -41,6 +45,7 @@ addButton.addEventListener('click', () => {
   addBook(book);
 });
 
+// Load page
 window.onload = () => {
   library = JSON.parse(localStorage.getItem('library' || '[]'));
   if (library === null) {
