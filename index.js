@@ -1,9 +1,16 @@
 let library = [];
 
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
 function getInput() {
-  const book = {};
-  book.title = document.getElementById('bookTitle').value;
-  book.author = document.getElementById('bookAuthor').value;
+  title = document.getElementById('bookTitle').value;
+  author = document.getElementById('bookAuthor').value;
+  const book = new Book(title, author);
   return book;
 }
 
