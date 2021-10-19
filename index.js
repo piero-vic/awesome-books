@@ -1,14 +1,16 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable no-use-before-define */
+
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
     this.id = Math.random();
   }
-
 }
 
 class Library {
-  constructor(){
+  constructor() {
     this.data = [];
   }
 
@@ -64,8 +66,5 @@ window.onload = () => {
     return;
   }
 
-  library.data.forEach((book) => {
-    console.log(book);
-    addToUI(book);
-  });
+  library.data.forEach((book) => addToUI(book));
 };
