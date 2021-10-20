@@ -40,10 +40,18 @@ function getInput() {
 }
 
 function addToUI(bookObj) {
+  let colorClass = '';
+  if (library.data.indexOf(bookObj) % 2 !== 0) {
+    colorClass = 'light';
+  } else {
+    colorClass = 'dark';
+  }
   const bookList = document.getElementById('book-list');
   const book = document.createElement('LI');
+  book.classList.add('book');
+  book.classList.add(colorClass);
   book.setAttribute('id', bookObj.id);
-  book.innerHTML = `<h3> ${bookObj.title} </h3> <p>${bookObj.author} </p>`;
+  book.innerHTML = `<p><span>${bookObj.title}</span> by ${bookObj.author}</p>`;
   const deleteBtn = document.createElement('button');
   deleteBtn.innerHTML = 'Delete';
   deleteBtn.addEventListener('click', () => library.removeBook(bookObj.id));
