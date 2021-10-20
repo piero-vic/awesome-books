@@ -37,7 +37,14 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: grey;
+}
+
+.dark {
+  background-color: #87888a;
+}
+
+.light {
+  background-color: #bdc0C7;
 }
 
 .book p {
