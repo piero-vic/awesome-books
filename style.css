@@ -7,6 +7,10 @@ li {
   list-style: none;
 }
 
+hr {
+  width: 20%;
+}
+
 .title,
 .title1 {
   text-align: center;
@@ -27,10 +31,10 @@ li {
 }
 
 .list {
-  border: 3px solid #000000;
+  border: 3px solid #000;
   border-radius: 8px;
   width: 40%;
-  margin: auto;
+  margin: 0 auto 20px auto;
 }
 
 .book {
@@ -44,7 +48,7 @@ li {
 }
 
 .light {
-  background-color: #bdc0C7;
+  background-color: #bdc0c7;
 }
 
 .book p {

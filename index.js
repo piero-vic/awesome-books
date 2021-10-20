@@ -41,7 +41,7 @@ function getInput() {
 
 function addToUI(bookObj) {
   let colorClass = '';
-  if (library.data.indexOf(bookObj) % 2 != 0) {
+  if (library.data.indexOf(bookObj) % 2 !== 0) {
     colorClass = 'light';
   } else {
     colorClass = 'dark';
