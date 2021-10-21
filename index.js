@@ -76,3 +76,31 @@ window.onload = () => {
 
   library.data.forEach((book) => addToUI(book));
 };
+
+function displaySection(section) {
+  const sectionList = document.getElementById('list');
+  const sectionForm = document.getElementById('form');
+  const sectionContact = document.getElementById('contact');
+
+  switch (section) {
+    case 'list':
+      sectionList.style.display = 'block';
+      sectionForm.style.display = 'none';
+      sectionContact.style.display = 'none';
+      break;
+    
+    case 'form':
+      sectionList.style.display = 'none';
+      sectionForm.style.display = 'block';
+      sectionContact.style.display = 'none';
+      break;
+    
+    case 'contact':
+      sectionList.style.display = 'none';
+      sectionForm.style.display = 'none';
+      sectionContact.style.display = 'block';
+      break;
+    
+    default: break;
+  }
+}

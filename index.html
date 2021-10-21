@@ -12,9 +12,9 @@
       <h2 class="header-title">Awesome Books</h2>
       <nav>
         <ul class="nav-list">
-          <li><a href="#">List</a></li>
-          <li><a href="#">Add New</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#" id="navList" onclick="displaySection('list')">List</a></li>
+          <li><a href="#" id="navNew" onclick="displaySection('form')">Add New</a></li>
+          <li><a href="#" id="navContact" onclick="displaySection('contact')">Contact</a></li>
         </ul>
       </nav>
   </header>
@@ -38,7 +38,7 @@
       </form>
     </div>
 
-    <div class="contact">
+    <div id="contact" class="contact">
       <h2 class="title1">Contact information</h2>
       <p>
         If you have any questions or you just want to say "Hello".

@@ -12,6 +12,11 @@ li {
   list-style: none;
 }
 
+.form,
+.contact {
+  display: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
