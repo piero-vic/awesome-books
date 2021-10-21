@@ -1,6 +1,7 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable no-use-before-define */
 
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -75,6 +76,7 @@ window.onload = () => {
   }
 
   library.data.forEach((book) => addToUI(book));
+  setDate();
 };
 
 function displaySection(section) {
@@ -107,4 +109,11 @@ function displaySection(section) {
     
     default: break;
   }
+}
+
+function setDate() {
+  const date = document.getElementById('date');
+  const { DateTime } = luxon;
+
+  date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');
 }
