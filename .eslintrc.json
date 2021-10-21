@@ -16,7 +16,6 @@
     "eol-last": "off"
   },
   "ignorePatterns": [
-    "luxon.min.js",
     "dist/",
     "build/"
   ]
