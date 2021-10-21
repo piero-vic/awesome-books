@@ -1,6 +1,9 @@
 body {
-  height: 100%;
+  height: 98vh;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ul {
@@ -22,7 +25,6 @@ a {
   text-decoration: none;
 }
 
-/* Header */
 .header,
 .footer {
   border: 3px solid #000;
@@ -42,10 +44,18 @@ a {
   gap: 15px;
 }
 
-/* Contact Section */
+.footer h3 {
+  margin: 0;
+}
+
 .contact {
-  width: 40%;
   margin: 0 auto 20px auto;
+}
+
+@media screen and (min-width:786px) {
+  .contact {
+    width: 40%;
+  }
 }
 
 .title,
@@ -57,21 +67,36 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
   margin: 0 auto;
   gap: 10px;
 }
 
 .input-form button {
   align-self: flex-end;
-  width: 10%;
+}
+
+@media screen and (min-width:786px) {
+  .input-form {
+    width: 30%;
+  }
+
+  .input-form button {
+    align-self: flex-end;
+    min-width: 10%;
+  }
 }
 
 .list {
   border: 3px solid #000;
   border-radius: 8px;
-  width: 40%;
+
   margin: 0 auto 20px auto;
+}
+
+@media screen and (min-width:786px) {
+  .list {
+    width: 40%;
+  }
 }
 
 .book {
