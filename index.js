@@ -1,7 +1,6 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable no-use-before-define */
 
-
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -79,6 +78,7 @@ window.onload = () => {
   setDate();
 };
 
+// eslint-disable-next-line no-unused-vars
 function displaySection(section) {
   const sectionList = document.getElementById('list');
   const sectionForm = document.getElementById('form');
@@ -92,27 +92,28 @@ function displaySection(section) {
       sectionContact.style.display = 'none';
       heading.innerHTML = 'All Awesome Books';
       break;
-    
+
     case 'form':
       sectionList.style.display = 'none';
       sectionForm.style.display = 'block';
       sectionContact.style.display = 'none';
       heading.innerHTML = 'Add a New Book';
       break;
-    
+
     case 'contact':
       sectionList.style.display = 'none';
       sectionForm.style.display = 'none';
       sectionContact.style.display = 'block';
       heading.innerHTML = 'Contact Information';
       break;
-    
+
     default: break;
   }
 }
 
 function setDate() {
   const date = document.getElementById('date');
+  // eslint-disable-next-line no-undef
   const { DateTime } = luxon;
 
   date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');

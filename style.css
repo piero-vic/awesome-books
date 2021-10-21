@@ -35,6 +35,11 @@ a {
   padding: 20px;
 }
 
+#date {
+  text-align: right;
+  margin-right: 5px;
+}
+
 .header-title {
   margin: 0;
 }
@@ -52,7 +57,7 @@ a {
   margin: 0 auto 20px auto;
 }
 
-@media screen and (min-width:786px) {
+@media screen and (min-width: 786px) {
   .contact {
     width: 40%;
   }
@@ -75,7 +80,7 @@ a {
   align-self: flex-end;
 }
 
-@media screen and (min-width:786px) {
+@media screen and (min-width: 786px) {
   .input-form {
     width: 30%;
   }
@@ -89,11 +94,10 @@ a {
 .list {
   border: 3px solid #000;
   border-radius: 8px;
-
   margin: 0 auto 20px auto;
 }
 
-@media screen and (min-width:786px) {
+@media screen and (min-width: 786px) {
   .list {
     width: 40%;
   }
