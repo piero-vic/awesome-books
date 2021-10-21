@@ -17,10 +17,6 @@ a {
   text-decoration: none;
 }
 
-hr {
-  width: 20%;
-}
-
 /* Header */
 .header {
   border: 3px solid #000;
@@ -40,6 +36,11 @@ hr {
   gap: 15px;
 }
 
+/* Contact Section */
+.contact {
+  width: 40%;
+  margin: 0 auto 20px auto;
+}
 
 .title,
 .title1 {
