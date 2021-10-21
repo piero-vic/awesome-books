@@ -81,24 +81,28 @@ function displaySection(section) {
   const sectionList = document.getElementById('list');
   const sectionForm = document.getElementById('form');
   const sectionContact = document.getElementById('contact');
+  const heading = document.getElementById('title');
 
   switch (section) {
     case 'list':
       sectionList.style.display = 'block';
       sectionForm.style.display = 'none';
       sectionContact.style.display = 'none';
+      heading.innerHTML = 'All Awesome Books';
       break;
     
     case 'form':
       sectionList.style.display = 'none';
       sectionForm.style.display = 'block';
       sectionContact.style.display = 'none';
+      heading.innerHTML = 'Add a New Book';
       break;
     
     case 'contact':
       sectionList.style.display = 'none';
       sectionForm.style.display = 'none';
       sectionContact.style.display = 'block';
+      heading.innerHTML = 'Contact Information';
       break;
     
     default: break;
