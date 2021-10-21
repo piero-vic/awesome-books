@@ -1,6 +1,3 @@
 node_modules
-.eslintrc.json
-.hintrc
-.stylelintrc.json
 package-lock.json
 package.json

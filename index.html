@@ -8,26 +8,57 @@
   <title>Awesome Books</title>
 </head>
 <body>
-  <main>
-    <div>
-      <h1 class="title">Awesome Books</h1>
+  <header>
+    <div class="header">
+      <h2 class="header-title">Awesome Books</h2>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#" id="navList" onclick="displaySection('list')">List</a></li>
+          <li><a href="#" id="navNew" onclick="displaySection('form')">Add New</a></li>
+          <li><a href="#" id="navContact" onclick="displaySection('contact')">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+    <p id="date" class="date"></p>
+  </header>
+
+  <main>
+
+    <div>
+      <h1 id="title" class="title">All Awesome Books</h1>
+
+    </div>
+
     <div id="list" class="list">
       <ul id="book-list">
       </ul>
     </div>
 
-    <hr>
-
-    <div id="form">
-      <h2 class="title1">Add a new book</h2>
+    <div id="form" class="form">
       <form action="#" class="input-form" method="post">
         <input id="bookTitle" type="text" placeholder="Title">
         <input id="bookAuthor" type="text" placeholder="Author">
         <button id="add-btn" type="button">Add</button>
       </form>
     </div>
+
+    <div id="contact" class="contact">
+      <p>
+        If you have any questions or you just want to say "Hello".
+        You can reach us to.
+      </p>
+      <ul>
+        <li>Our email: <a href="#">mail@mail.com</a></li>
+        <li>Our twitter: <a href="#">@awesomeBooks</a></li>
+        <li>Our github: <a href="#">@awesomeBooks</a></li>
+      </ul>
+    </div>
+
   </main>
+  <footer class="footer">
+    <h3>Copyright &copy;</h3>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

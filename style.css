@@ -1,14 +1,66 @@
 body {
-  height: 100%;
+  height: 98vh;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
   list-style: none;
 }
 
-hr {
-  width: 20%;
+.form,
+.contact {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header,
+.footer {
+  border: 3px solid #000;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#date {
+  text-align: right;
+  margin-right: 5px;
+}
+
+.header-title {
+  margin: 0;
+}
+
+.nav-list {
+  display: flex;
+  gap: 15px;
+}
+
+.footer h3 {
+  margin: 0;
+}
+
+.contact {
+  margin: 0 auto 20px auto;
+}
+
+@media screen and (min-width: 786px) {
+  .contact {
+    width: 40%;
+  }
 }
 
 .title,
@@ -20,21 +72,35 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
   margin: 0 auto;
   gap: 10px;
 }
 
 .input-form button {
   align-self: flex-end;
-  width: 10%;
+}
+
+@media screen and (min-width: 786px) {
+  .input-form {
+    width: 30%;
+  }
+
+  .input-form button {
+    align-self: flex-end;
+    min-width: 10%;
+  }
 }
 
 .list {
   border: 3px solid #000;
   border-radius: 8px;
-  width: 40%;
   margin: 0 auto 20px auto;
+}
+
+@media screen and (min-width: 786px) {
+  .list {
+    width: 40%;
+  }
 }
 
 .book {
