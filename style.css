@@ -18,7 +18,8 @@ a {
 }
 
 /* Header */
-.header {
+.header,
+.footer {
   border: 3px solid #000;
   border-radius: 8px;
   display: flex;
